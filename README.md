@@ -1,16 +1,27 @@
-# Astro Starter Kit: Basics
+# Personal Portfolio Website
 
-```sh
-npm create astro@latest -- --template basics
-```
+A modern, responsive portfolio website built with Astro and Tailwind CSS. This portfolio showcases my skills, projects, and professional experience as a web developer.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Features
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- Responsive design optimized for all devices
+- Dark mode support
+- Interactive UI with hover effects and animations
+- Skill showcase with custom icons
+- Project gallery with detailed cards
+- Professional experience timeline
+- About me section with personal information
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## Tech Stack
+
+- Astro.js - Fast, content-focused static site generator
+- Tailwind CSS - Utility-first CSS framework
+- SVG Icons - Custom and optimized SVG icons for skills and UI elements
+- Responsive Design - Mobile-first approach with adaptive layouts
+
+## Development
+
+This project uses pnpm as the package manager and Astro for the build system.
 
 ## 🚀 Project Structure
 
