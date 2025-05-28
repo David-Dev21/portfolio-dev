@@ -1,0 +1,8 @@
+---
+// Componente para aplicar un color que combine con el gradiente del título
+const { class: className = "" } = Astro.props;
+---
+
+<span class={`inline-block text-cyan-400 ${className}`}>
+  <slot />
+</span>

@@ -1,0 +1,76 @@
+---
+// Importa la imagen directamente
+import almacenImage from "../assets/images/almacen.webp";
+import LaravelIcon from "../components/icons/dev/Laravel.astro";
+import TailwindCSS from "../components/icons/dev/TailwindCSS.astro";
+import ReactIcon from "../components/icons/dev/React.astro";
+import ProjectItem from "./ProjectItem.astro";
+import Bootstrap from "../components/icons/dev/Bootstrap.astro";
+import NextJS from "./icons/dev/NextJS.astro";
+
+const TAGS = {
+  Laravel: {
+    name: "Laravel",
+    icon: LaravelIcon,
+  },
+  TailwindCSS: {
+    name: "TailwindCSS",
+    icon: TailwindCSS,
+  },
+  React: {
+    name: "React",
+    icon: ReactIcon,
+  },
+  Bootstrap: {
+    name: "Bootstrap",
+    icon: Bootstrap,
+  },
+  NextJS: {
+    name: "NextJS",
+    icon: NextJS,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "Sistema de Control de Almacén",
+    description:
+      "Un sistema para gestionar el inventario de un almacén, permitiendo el seguimiento de productos y su disponibilidad.",
+    link: "#",
+    github: "https://github.com/David-Dev21/almacen",
+    image: almacenImage.src,
+    tags: [TAGS.Laravel, TAGS.Bootstrap],
+  },
+  {
+    title: "Sistema de Control de Recargas de Toner y Tinta",
+    description:
+      "Un sistema para gestionar recargas de toner y tinta, optimizando el proceso de control y seguimiento.",
+    link: "#",
+    github: "https://github.com/David-Dev21/telematica",
+    image: almacenImage.src,
+    tags: [TAGS.Laravel, TAGS.Bootstrap],
+  },
+  {
+    title: "Pagina Web de la Carrera de Enfermería UPEA",
+    description:
+      "Un sitio web informativo para la carrera de enfermería de la UPEA, con detalles sobre convocatorias y actividades.",
+    link: "#",
+    github: "",
+    image: almacenImage.src,
+    tags: [TAGS.NextJS, TAGS.TailwindCSS],
+  },
+  {
+    title: "Pagina Web de la Carrera de Medicina UPEA",
+    description:
+      "Un sitio web informativo para la carrera de medicina de la UPEA, con detalles sobre convocatorias y actividades.",
+    link: "#",
+    github: "",
+    image: almacenImage.src,
+    tags: [TAGS.NextJS, TAGS.TailwindCSS],
+  },
+];
+---
+
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+  {PROJECTS.map((project) => <ProjectItem {...project} />)}
+</div>

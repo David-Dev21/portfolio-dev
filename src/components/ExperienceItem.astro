@@ -1,0 +1,32 @@
+---
+import ButtonLink from "./ButtonLink.astro";
+import ArrowRight from "./icons/ArrowRight.astro";
+
+interface Props {
+  title: string;
+  date: string;
+  description: string;
+  link?: string;
+}
+const { title, date, description, link } = Astro.props;
+---
+
+<div
+  class="absolute w-3 h-3 bg-cyan-700 rounded-full mt-1.5 -start-1.5 border border-cyan-200/90"
+>
+</div>
+<time class="mb-1 text-sm font-normal leading-none text-gray-400">{date}</time>
+<h3 class="text-lg font-semibold text-cyan-200/80 mb-1">
+  {title}
+</h3>
+<p class="mb-4 text-base font-normal text-gray-400 text-pretty">
+  {description}
+</p>
+{
+  link && (
+    <ButtonLink href={link} class="w-40 rounded-full lg:w-64">
+      <ArrowRight class="size-4 lg:size-5" />
+      Ver más
+    </ButtonLink>
+  )
+}

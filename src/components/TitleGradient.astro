@@ -1,0 +1,9 @@
+---
+const { class: className = "" } = Astro.props;
+---
+
+<span
+  class={`${className} font-bold py-2 bg-gradient-to-r from-cyan-600 to-cyan-400 bg-clip-text text-transparent`}
+>
+  <slot />
+</span>

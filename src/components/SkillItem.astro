@@ -1,0 +1,28 @@
+---
+// Importamos la imagen directamente
+import backgroundImage from "../assets/images/almacen.webp";
+
+interface Props {
+  name: string;
+  icon: any;
+}
+const { name, icon: Icon } = Astro.props;
+---
+
+<div class="group flex flex-col items-center justify-center text-center">
+  <div
+    class="bg-gray-800/60 backdrop-blur-sm p-4 rounded-full flex items-center justify-center w-16 h-16 md:w-20 md:h-20 shadow-lg border border-gray-700/50 mb-2 transition-all duration-300 group-hover:bg-gray-700/80 group-hover:scale-110 group-hover:border-cyan-500/50 group-hover:shadow-cyan-500/20"
+    style={`background-image: linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.8)), url(${backgroundImage.src});`}
+  >
+    {
+      Icon && (
+        <Icon class="size-10 md:size-12 text-cyan-400 group-hover:text-cyan-300" />
+      )
+    }
+  </div>
+  <h3
+    class="text-sm md:text-base font-medium text-gray-300 group-hover:text-cyan-300 transition-colors duration-300"
+  >
+    {name}
+  </h3>
+</div>

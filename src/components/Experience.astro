@@ -1,0 +1,34 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCE = [
+  {
+    date: "Febrero 2025 - Actualidad",
+    title: "Pasante de Desarrollo de Software en U-TIC",
+    description:
+      "Desarrollo paginas y aplicaciones web con tecnologías modernas como NextJS y Laravel.",
+  },
+  {
+    date: "Diciembre 2024 - Mayo 2025",
+    title:
+      "Pasante de Soporte Técnico y Desarrollo de Software en el CMDO. DPTL. POLICIA LA PAZ",
+    description:
+      "Proporcioné soporte técnico al personal y participé en el desarrollo de sistemas web para optimizar procesos internos.",
+  },
+  {
+    date: "2021 - Actualidad",
+    title: "Estudiante de Ingeniería de Sistemas en la UPEA",
+    description:
+      "Formación en desarrollo de software, bases de datos y tecnologías web.",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-2">
+  {
+    EXPERIENCE.map((item) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...item} />
+      </li>
+    ))
+  }
+</ol>

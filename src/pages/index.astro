@@ -1,11 +1,174 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import "../assets/css/global.css";
+import Badge from "../components/Badge.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import ButtonLink from "../components/ButtonLink.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Experience from "../components/Experience.astro";
+import BriefCaseIcon from "../components/icons/BriefCase.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import Project from "../components/Project.astro";
+import TitleGradient from "../components/TitleGradient.astro";
+import Skill from "../components/Skill.astro";
+import Server from "../components/icons/Server.astro";
+import UserIcon from "../components/icons/User.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <main class="px-6">
+    <SectionContainer class="h-screen">
+      <span class="text-sm sm:text-base">
+        Hola, soy <span class="text-cyan-200/90 font-bold"> ArdyX </span>, pero
+        mi nombre real es:
+      </span>
+      <h1 class="flex flex-col sm:flex-row justify-between items-center gap-2">
+        <TitleGradient
+          class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-pretty"
+        >
+          Ruben David M.
+        </TitleGradient>
+        <Badge
+          class="border-2 border-green-200 bg-green-300/50 text-green-300 text-pretty"
+        >
+          Disponible para trabajar
+        </Badge>
+      </h1>
+      <h2
+        class="text-sm sm:text-base md:text-lg lg:text-xl text-balance py-10 max-w-3xl"
+      >
+        <span class="font-bold">Ingeniero de Sistemas en formación, </span>
+        <span class="opacity-80">con experiencia en</span>
+        <span class="text-cyan-200/90 font-bold">
+          Desarrollo Web Full-Stack.
+        </span>
+        <span class="opacity-80">
+          Además, tengo conocimientos sólidos en servidores y redes, lo que me
+          permite gestionar entornos tecnológicos de manera eficiente.
+        </span>
+      </h2>
+      <nav class="flex justify-center gap-4 flex-wrap">
+        <ButtonLink href="https://www.linkedin.com/in/david-mamani-a3b745352/">
+          <LinkedInIcon class="size-4 md:size-6" />
+          LinkedIn
+        </ButtonLink>
+        <ButtonLink href="https://github.com/David-Dev21">
+          <GitHubIcon class="size-4 md:size-6" />
+          GitHub
+        </ButtonLink>
+        <ButtonLink href="mailto:rubendavid.rd21@gmail.com">
+          <MailIcon class="size-4 md:size-6" />
+          rubendavid.rd21@gmail.com
+        </ButtonLink>
+      </nav>
+    </SectionContainer>
+    <SectionContainer id="experience">
+      <h2 class="flex justify-between items-center gap-x-2">
+        <TitleGradient class="text-2xl md:text-3xl lg:text-5xl">
+          Experiencia
+        </TitleGradient>
+        <BriefCaseIcon class="size-6 md:size-7" />
+      </h2>
+      <Experience />
+    </SectionContainer>
+    <SectionContainer id="projects">
+      <h2 class="flex items-center justify-between gap-x-2">
+        <TitleGradient class="text-2xl md:text-3xl lg:text-5xl">
+          Proyectos
+        </TitleGradient>
+        <CodeIcon class="size-6 md:size-7" />
+      </h2>
+      <Project />
+    </SectionContainer>
+    <SectionContainer id="skills">
+      <h2 class="flex items-center justify-between gap-x-2">
+        <TitleGradient class="text-2xl md:text-3xl lg:text-5xl">
+          Tecnologías
+        </TitleGradient>
+        <Server class="size-6 md:size-7" />
+      </h2>
+      <Skill />
+    </SectionContainer>
+
+    <SectionContainer id="about">
+      <h2 class="flex items-center justify-between gap-x-2">
+        <TitleGradient class="text-2xl md:text-3xl lg:text-5xl">
+          Sobre Mí
+        </TitleGradient>
+        <UserIcon class="size-6 md:size-7" />
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+        <!-- Columna 1: Foto y detalles básicos -->
+        <div class="flex flex-col items-center md:items-start">
+          <div
+            class="w-36 h-36 bg-gradient-to-br from-cyan-200/90 to-cyan-600/90 rounded-full p-1 mb-4"
+          >
+            <div
+              class="w-full h-full rounded-full overflow-hidden border-2 border-white/20"
+            >
+              <img
+                src="/src/assets/svg/rd.svg"
+                alt="Foto de Rubén David"
+                class="w-full h-full bg-white p-4"
+              />
+            </div>
+          </div>
+
+          <h3 class="text-xl font-bold text-white mb-2">Ruben David M.</h3>
+          <p class="text-cyan-200/90 font-medium mb-3 text-nowrap">
+            Desarrollador Web Full Stack
+          </p>
+
+          <div class="flex flex-col gap-2 text-gray-300 text-sm">
+            <p class="flex items-center gap-2">
+              <span class="text-cyan-400">●</span> La Paz, Bolivia
+            </p>
+            <p class="flex items-center gap-2">
+              <span class="text-cyan-400">●</span> Español (Nativo)
+            </p>
+            <p class="flex items-center gap-2">
+              <span class="text-cyan-400">●</span> Inglés (Básico)
+            </p>
+          </div>
+        </div>
+
+        <!-- Columna 2: Biografía -->
+        <div class="md:col-span-2 flex flex-col gap-4 text-gray-300">
+          <p class="text-lg">
+            Soy alguien curioso, tranquilo y con ganas de seguir aprendiendo.
+            Estudio Ingeniería de Sistemas, pero no todo en mi vida es código.
+            Me gusta la música, descubrir cosas nuevas y entender cómo funcionan
+            las cosas.
+          </p>
+
+          <p>
+            Me gusta aprender haciendo. He participado en proyectos reales que
+            me han permitido crecer como desarrollador y como profesional.
+            Siempre busco desafíos que me reten y me ayuden a seguir avanzando.
+          </p>
+
+          <div class="mt-4">
+            <h4 class="text-cyan-200/90 font-medium mb-2">Intereses:</h4>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-sm"
+                >Desarrollo Web</span
+              >
+              <span
+                class="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-sm"
+                >Open Source</span
+              >
+              <span
+                class="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-sm"
+                >Música</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </SectionContainer>
+  </main>
 </Layout>

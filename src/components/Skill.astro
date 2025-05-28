@@ -1,0 +1,88 @@
+---
+import SkillItem from "./SkillItem.astro";
+import Laravel from "./icons/dev/Laravel.astro";
+import MySql from "./icons/dev/MySql.astro";
+import JavaScript from "./icons/dev/JavaScript.astro";
+import Php from "./icons/dev/Php.astro";
+import TailwindCSS from "./icons/dev/TailwindCSS.astro";
+import React from "./icons/dev/React.astro";
+import TypeScript from "./icons/dev/TypeScript.astro";
+import Git from "./icons/dev/Git.astro";
+import Docker from "./icons/dev/Docker.astro";
+import Bootstrap from "./icons/dev/Bootstrap.astro";
+import Html from "./icons/dev/Html.astro";
+import NextJS from "./icons/dev/NextJS.astro";
+import Vite from "./icons/dev/Vite.astro";
+import Java from "./icons/dev/Java.astro";
+import SprintBoot from "./icons/dev/SprintBoot.astro";
+
+// Definimos las habilidades con sus detalles
+const SKILLS = [
+  {
+    name: "Laravel",
+    icon: Laravel,
+  },
+  {
+    name: "React",
+    icon: React,
+  },
+  {
+    name: "Tailwind CSS",
+    icon: TailwindCSS,
+  },
+  {
+    name: "JavaScript",
+    icon: JavaScript,
+  },
+  {
+    name: "TypeScript",
+    icon: TypeScript,
+  },
+  {
+    name: "PHP",
+    icon: Php,
+  },
+  {
+    name: "MySQL",
+    icon: MySql,
+  },
+  {
+    name: "Next.js",
+    icon: NextJS,
+  },
+  {
+    name: "Git",
+    icon: Git,
+  },
+  {
+    name: "Docker",
+    icon: Docker,
+  },
+  {
+    name: "Bootstrap",
+    icon: Bootstrap,
+  },
+  {
+    name: "HTML",
+    icon: Html,
+  },
+  {
+    name: "Vite",
+    icon: Vite,
+  },
+  {
+    name: "Java",
+    icon: Java,
+  },
+  {
+    name: "Spring Boot",
+    icon: SprintBoot,
+  },
+];
+---
+
+<div
+  class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 justify-center"
+>
+  {SKILLS.map((skill) => <SkillItem {...skill} />)}
+</div>
