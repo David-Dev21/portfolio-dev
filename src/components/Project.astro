@@ -1,6 +1,7 @@
 ---
 // Importa la imagen directamente
 import almacenImage from "../assets/images/almacen.webp";
+import defaultImage from "../assets/images/default.webp";
 import LaravelIcon from "../components/icons/dev/Laravel.astro";
 import TailwindCSS from "../components/icons/dev/TailwindCSS.astro";
 import ReactIcon from "../components/icons/dev/React.astro";
@@ -35,8 +36,8 @@ const PROJECTS = [
   {
     title: "Sistema de Control de Almacén",
     description:
-      "Un sistema para gestionar el inventario de un almacén, permitiendo el seguimiento de productos y su disponibilidad.",
-    link: "#",
+      "Este sistema permite hacer el seguimiento de ingresos y salidas de productos y su disponibilidad.",
+    link: "https://almacen.ardyx.systems/login",
     github: "https://github.com/David-Dev21/almacen",
     image: almacenImage.src,
     tags: [TAGS.Laravel, TAGS.Bootstrap],
@@ -47,7 +48,7 @@ const PROJECTS = [
       "Un sistema para gestionar recargas de toner y tinta, optimizando el proceso de control y seguimiento.",
     link: "#",
     github: "https://github.com/David-Dev21/telematica",
-    image: almacenImage.src,
+    image: defaultImage.src,
     tags: [TAGS.Laravel, TAGS.Bootstrap],
   },
   {
@@ -56,7 +57,7 @@ const PROJECTS = [
       "Un sitio web informativo para la carrera de enfermería de la UPEA, con detalles sobre convocatorias y actividades.",
     link: "#",
     github: "",
-    image: almacenImage.src,
+    image: defaultImage.src,
     tags: [TAGS.NextJS, TAGS.TailwindCSS],
   },
   {
@@ -65,7 +66,7 @@ const PROJECTS = [
       "Un sitio web informativo para la carrera de medicina de la UPEA, con detalles sobre convocatorias y actividades.",
     link: "#",
     github: "",
-    image: almacenImage.src,
+    image: defaultImage.src,
     tags: [TAGS.NextJS, TAGS.TailwindCSS],
   },
 ];

@@ -19,7 +19,7 @@ import UserIcon from "../components/icons/User.astro";
 
 <Layout>
   <main class="px-6">
-    <SectionContainer class="h-screen">
+    <SectionContainer class="h-screen text-white/80">
       <span class="text-sm sm:text-base">
         Hola, soy <span class="text-cyan-200/90 font-bold"> ArdyX </span>, pero
         mi nombre real es:
@@ -30,15 +30,18 @@ import UserIcon from "../components/icons/User.astro";
         >
           Ruben David M.
         </TitleGradient>
-        <Badge
-          class="border-2 border-green-200 bg-green-300/50 text-green-300 text-pretty"
+        <a
+          href="https://www.linkedin.com/in/david-mamani-a3b745352/"
+          target="_blank"
         >
-          Disponible para trabajar
-        </Badge>
+          <Badge
+            class="border-2 border-green-200 bg-green-300/50 text-green-300 text-pretty"
+          >
+            Disponible para trabajar
+          </Badge>
+        </a>
       </h1>
-      <h2
-        class="text-sm sm:text-base md:text-lg lg:text-xl text-balance py-10 max-w-3xl"
-      >
+      <h2 class="text-base sm:text-lg lg:text-xl text-balance py-10 max-w-3xl">
         <span class="font-bold">Ingeniero de Sistemas en formación, </span>
         <span class="opacity-80">con experiencia en</span>
         <span class="text-cyan-200/90 font-bold">
@@ -137,14 +140,13 @@ import UserIcon from "../components/icons/User.astro";
 
         <!-- Columna 2: Biografía -->
         <div class="md:col-span-2 flex flex-col gap-4 text-gray-300">
-          <p class="text-lg">
+          <p class="text-sm sm:text-base md:text-lg lg:text-xl">
             Soy alguien curioso, tranquilo y con ganas de seguir aprendiendo.
             Estudio Ingeniería de Sistemas, pero no todo en mi vida es código.
             Me gusta la música, descubrir cosas nuevas y entender cómo funcionan
             las cosas.
           </p>
-
-          <p>
+          <p class="text-sm sm:text-base md:text-lg lg:text-xl">
             Me gusta aprender haciendo. He participado en proyectos reales que
             me han permitido crecer como desarrollador y como profesional.
             Siempre busco desafíos que me reten y me ayuden a seguir avanzando.

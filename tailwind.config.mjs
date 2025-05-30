@@ -5,4 +5,5 @@ export default {
     extend: {},
   },
   plugins: [],
+  darkMode: 'media', // Esto activa el modo oscuro basado en las preferencias del sistema
 }
